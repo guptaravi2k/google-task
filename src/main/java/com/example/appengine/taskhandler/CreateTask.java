@@ -42,6 +42,9 @@ public class CreateTask {
       int seconds = 0; // Scheduled delay for the task in seconds
 
       // Construct the fully qualified queue name.
+      System.out.println("project id = " + projectId);
+      System.out.println("location = " + location);
+      System.out.println("queueName = " + queueName);
       String queuePath = QueueName.of(projectId, location, queueName).toString();
 
       // Construct the task body.
