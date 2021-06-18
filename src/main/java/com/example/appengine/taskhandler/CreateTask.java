@@ -35,8 +35,8 @@ public class CreateTask {
     try (CloudTasksClient client = CloudTasksClient.create()) {
       // Variables provided by system variables.
       String projectId = System.getenv("GOOGLE_CLOUD_PROJECT");
-      String queueName = System.getenv("QUEUE_ID");
-      String location = System.getenv("LOCATION_ID");
+      String queueName = "trade-q";//System.getenv("QUEUE_ID");
+      String location = "australia-southeast1";//System.getenv("LOCATION_ID");
       // Optional variables.
       String payload = "hello";
       int seconds = 0; // Scheduled delay for the task in seconds
